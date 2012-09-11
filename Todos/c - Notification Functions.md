@@ -22,7 +22,7 @@ or:
 
 UPDATE: 16A Cricket Fixture on 2 SEP 12 is at Weigall 3 at 12:00 AM.
 
-Most important, send with the very simple function from: https://github.com/laprice/pushover:
+Most important, send with the very simple function from: https://github.com/laprice/pushover :
 
     def send_message(account, message):
     	# mild sanity check on the message
