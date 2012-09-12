@@ -24,11 +24,11 @@ class Fixture(models.Model):
     def __unicode__(self):
         return self.time
 
-class Person(models.Model):
-    mobile = models.CharField(max_length=15, blank=True)
-    email = models.CharField(max_length=200)
-    pushover = models.CharField(max_length=30)
-    user = models.OneToOneField(User, unique=True)
+class Subscription(models.Model):
+    mobile = models.CharField(max_length=15, blank=True, null=True)
+    email = models.CharField(max_length=200, blank=True, null=True)
+    pushover = models.CharField(max_length=30, blank=True, null=True)
+    user = models.ForeignKey(User)
 
     def __unicode__(self):
         return self.user.username 
