@@ -9,7 +9,7 @@ urlpatterns = patterns('',
     # url(r'^$', 'fixtures.views.home', name='home'),
     # url(r'^fixtures/', include('fixtures.foo.urls')),
 
-    url(r'^$', 'fixtures.views.manage'),
+    url(r'^$', 'fixtures.views.home'),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
