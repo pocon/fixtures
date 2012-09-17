@@ -25,11 +25,11 @@ class Fixture(models.Model):
         return self.team
 
 class Subscription(models.Model):
-    mobile = models.CharField(max_length=15, blank=True, null=True)
-    email = models.CharField(max_length=200, blank=True, null=True)
+    # mobile = models.CharField(max_length=15, blank=True, null=True)
     pushover = models.CharField(max_length=30, blank=True, null=True)
     user = models.ForeignKey(User)
-    fixture = models.ForeignKey(Fixture)
+    team = models.ForeignKey(Team)
+    # Email gotten from user account
 
     def __unicode__(self):
         return self.user.username

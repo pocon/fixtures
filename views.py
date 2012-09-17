@@ -5,14 +5,10 @@ from django.contrib.auth.decorators import login_required
 
 def home(request):
     if request.user.is_authenticated():
-        return redirect('current')
+        subs = Subscription.objects.filter(user=request.user)
+        return render_to_response('fixtures/current.html', {'subs': subs,})
     else:
         return render_to_response('fixtures/index.html')
-
-# url of "manage/"
-@login_required
-def current(request):
-    return render_to_response('fixtures/current.html')
 
 @login_required
 def edit(request, sub_id):
