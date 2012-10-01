@@ -20,4 +20,13 @@ def edit(request, sub_id):
 
 @login_required
 def new(request):
-    return render_to_response('fixtures/new.html')
+    if request.method == 'POST':
+        form = SubscriptionForm(request.POST)
+        form.user = request.user
+        if form.is_valid():
+            return redirect('home')
+    else:
+        form = SubscriptionForm
+    return render_to_response('fixtures/new.html', {'form': form,})
+    # This form must be added into the template! Somebody go do that while I
+    # get some cake!
