@@ -11,6 +11,7 @@ urlpatterns = patterns('',
 
     url(r'^$', 'fixtures.views.home'),
     url(r'^edit/(?P<sub_id>\d+)/$', 'fixtures.views.edit'),
+    url(r'^delete/(?P<sub_id>\d+)/$', 'fixtures.views.delete'),
     url(r'^new/$', 'fixtures.views.new'),
 
     # Uncomment the admin/doc line below to enable admin documentation:
