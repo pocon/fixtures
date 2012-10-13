@@ -36,7 +36,7 @@ def new(request):
 def delete(request, sub_id):
     sub = get_object_or_404(Subscription, pk=sub_id)
     if sub.user == request.user:
-        # messages.add_message(request, messages.INFO, 'Hello world.')
+        messages.add_message(request, messages.INFO, 'Successfully Unsubscribed')
         # That is how to add a message ^^^
         # TODO: add in delete code here
         
