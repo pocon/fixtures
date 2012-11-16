@@ -23,7 +23,7 @@ class Fixture(models.Model):
     date = models.CharField(max_length=200)
 
     def __unicode__(self):
-        return self.team
+        return unicode(self.team)
 
 class Subscription(models.Model):
     mobile = models.CharField(max_length=15, blank=True, null=True)
